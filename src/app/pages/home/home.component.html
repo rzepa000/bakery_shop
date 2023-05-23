@@ -8,6 +8,7 @@ class="min-h-full max-w-6xl mx-auto border-x"
         </div>
     </mat-drawer>
     <mat-drawer-content class="p-6">
-        <app-products-header></app-products-header>
+        <app-products-header (columnsCountChange)="onColumnsChange($event)"></app-products-header>
+        {{cols}}
     </mat-drawer-content>
 </mat-drawer-container>

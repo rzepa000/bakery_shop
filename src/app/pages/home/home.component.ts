@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   ]
 })
 export class HomeComponent {
+  cols=3;
+
+  onColumnsChange(colsNum: number):void {
+    this.cols=colsNum;
+  }
 
 }
