@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatGridListModule} from '@angular/material/grid-list'
@@ -12,7 +12,6 @@ import {MatTableModule} from '@angular/material/table'
 import {MatBadgeModule} from '@angular/material/badge'
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 import {MatExpansionModule} from '@angular/material/expansion'
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +21,9 @@ import { ProductsHeaderComponent } from './pages/home/components/products-header
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
 import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { CartService } from './services/cart.service';
+import { StoreService } from './services/store.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,9 +51,14 @@ import { CartComponent } from './pages/cart/cart.component';
     MatTableModule,
     MatBadgeModule,
     MatSnackBarModule,
+    HttpClientModule,
 
   ],
-  providers: [],
+  providers: [CartService,
+    StoreService,
+    {provide: DEFAULT_CURRENCY_CODE, useValue: 'GBP' }
+  ],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
