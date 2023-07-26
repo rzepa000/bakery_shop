@@ -1,0 +1,18 @@
+<div class="bg-amber-100 max-w-7xl m-auto text-center center">
+    <h1 class="font-serif pt-5">Welcome to La Trei Freti!</h1>
+    <img src="../../../../assets/hero.jpg" class="p-5 mx-auto w-max rounded-3xl center"/>
+    <p class="font-bold">Come visit us in Luton at</p>
+    <p>13 Collingdon St, Luton LU1 1RT</p>
+    <google-map
+    class="p-5 mx-auto"
+    height="500px"
+    width="auto"
+    [center]="center"
+    
+    >
+        <map-marker 
+        [position]="center"
+        ></map-marker>
+    </google-map>
+    
+</div>

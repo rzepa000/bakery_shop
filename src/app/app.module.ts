@@ -24,6 +24,10 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './pages/about/about/about.component';
+import { ContactComponent } from './pages/contact/contact/contact.component';
+import { HeroComponent } from './pages/hero/hero/hero.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ProductsHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent
+    CartComponent,
+    AboutComponent,
+    ContactComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +59,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatBadgeModule,
     MatSnackBarModule,
     HttpClientModule,
+    GoogleMapsModule
 
   ],
   providers: [CartService,
