@@ -28,6 +28,8 @@ import { AboutComponent } from './pages/about/about/about.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';
 import { HeroComponent } from './pages/hero/hero/hero.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { FoodPageComponent } from './pages/food-page/food-page.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { GoogleMapsModule } from '@angular/google-maps';
     CartComponent,
     AboutComponent,
     ContactComponent,
-    HeroComponent
+    HeroComponent,
+    FoodPageComponent,
+
   ],
   imports: [
     BrowserModule,

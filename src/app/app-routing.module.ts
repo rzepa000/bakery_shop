@@ -5,6 +5,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { HeroComponent } from './pages/hero/hero/hero.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';
 import { AboutComponent } from './pages/about/about/about.component';
+import { FoodPageComponent } from './pages/food-page/food-page.component';
 
 const routes: Routes = [{
   path: 'home',
@@ -29,6 +30,11 @@ const routes: Routes = [{
 {
   path: 'contact',
   component: ContactComponent
+
+},
+{
+  path: 'food/:id',
+  component: FoodPageComponent
 
 },
 {
